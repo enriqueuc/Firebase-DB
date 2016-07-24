@@ -3,23 +3,47 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--View Controller-->
         <scene sceneID="huP-sf-bmG">
             <objects>
-                <tableViewController id="Glu-HV-HCS" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qbu-7B-efa">
+                <tableViewController id="Glu-HV-HCS" customClass="ViewController" customModule="Firebase_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qbu-7B-efa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Myv-BQ-Y4S">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="Myv-BQ-Y4S">
+                                <rect key="frame" x="0.0" y="28" width="600" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Myv-BQ-Y4S" id="cKv-A2-A89">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRo-nR-L30">
+                                            <rect key="frame" x="13" y="13" width="574" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2u-jZ-YUb">
+                                            <rect key="frame" x="13" y="39" width="574" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lRo-nR-L30" firstAttribute="leading" secondItem="cKv-A2-A89" secondAttribute="leadingMargin" constant="5" id="46S-Fw-pyb"/>
+                                        <constraint firstItem="G2u-jZ-YUb" firstAttribute="top" secondItem="lRo-nR-L30" secondAttribute="bottom" constant="5" id="8IY-lj-Bfh"/>
+                                        <constraint firstItem="lRo-nR-L30" firstAttribute="top" secondItem="cKv-A2-A89" secondAttribute="topMargin" constant="5" id="QVz-zU-8ee"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="G2u-jZ-YUb" secondAttribute="trailing" constant="5" id="VOS-Nr-3dj"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lRo-nR-L30" secondAttribute="trailing" constant="5" id="bw3-oS-F2f"/>
+                                        <constraint firstItem="G2u-jZ-YUb" firstAttribute="top" secondItem="lRo-nR-L30" secondAttribute="bottom" constant="5" id="sa5-zk-Qx4"/>
+                                        <constraint firstItem="G2u-jZ-YUb" firstAttribute="leading" secondItem="cKv-A2-A89" secondAttribute="leadingMargin" constant="5" id="uJ4-jo-PEu"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
